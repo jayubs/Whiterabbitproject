@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>PROJECT WHITE RABBIT</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="scanlines"></div>
+
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen">
+    <div class="boot-text">
+      <p>PROJECT WHITERABBIT.EXE</p>
+      <p>INITIALIZING...</p>
+      <p>ESTABLISHING CONNECTION...</p>
+      <p>SEARCHING FOR SIGNAL...</p>
+      <p class="warning">SIGNAL DETECTED.</p>
+      <br>
+      <p>YOU HAVE ENTERED AN UNAUTHORIZED CHANNEL.</p>
+      <br>
+      <button onclick="enterRabbitHole()">ENTER THE RABBIT HOLE</button>
+    </div>
+  </div>
+
+
+  <!-- MAIN WEBSITE -->
+  <main id="main-site" class="hidden">
+
+    <header>
+      <div class="logo">
+        PROJECT<br>
+        WHITE RABBIT
+      </div>
+
+      <div class="status">
+        ● SYSTEM ONLINE
+      </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="terminal-window">
+
+        <div class="terminal-header">
+          <span>WHITE_RABBIT://TERMINAL</span>
+          <span>● ENCRYPTED</span>
+        </div>
+
+        <div class="terminal-content">
+
+          <p>> CONNECTION ESTABLISHED.</p>
+
+          <p>> USER IDENTIFIED.</p>
+
+          <p class="glitch-text">> YOU SHOULD NOT BE HERE.</p>
+
+          <br>
+
+          <p>
+            Some questions are worth asking.
+          </p>
+
+          <p>
+            Some stories are worth digging into.
+          </p>
+
+          <p>
+            Some doors should remain closed.
+          </p>
+
+          <br>
+
+          <p>> The question is...</p>
+
+          <h1>
+            HOW FAR WILL YOU FOLLOW THE RABBIT?
+          </h1>
+
+          <button class="main-button" onclick="scrollToTerminal()">
+            [ BEGIN TRANSMISSION ]
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LIVE TRACKER -->
+    <section class="tracker">
+
+      <p>LIVE NETWORK STATUS</p>
+
+      <div class="counter">
+        <span id="user-count">1,337</span>
+      </div>
+
+      <p>USERS HAVE ENTERED THE RABBIT HOLE</p>
+
+    </section>
+
+
+    <!-- AI TERMINAL -->
+    <section id="terminal-section">
+
+      <h2>THE WHITE RABBIT TERMINAL</h2>
+
+      <p class="section-description">
+        Ask a question.
+        The system is listening.
+      </p>
+
+      <div class="chat-terminal">
+
+        <div id="chat-output">
+
+          <p class="system-message">
+            WHITE RABBIT ONLINE.
+          </p>
+
+          <p class="system-message">
+            ASK YOUR QUESTION.
+          </p>
+
+        </div>
+
+        <div class="chat-input">
+
+          <span>USER://</span>
+
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your question..."
+            onkeydown="handleChat(event)"
+          >
+
+          <button onclick="sendMessage()">
+            SEND
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COORDINATE GENERATOR -->
+    <section id="coordinates">
+
+      <h2>THE RABBIT HOLE</h2>
+
+      <p class="section-description">
+        Every rabbit hole begins somewhere.
+      </p>
+
+      <div class="coordinate-box">
+
+        <p>> ANOMALY LOCATOR INITIALIZED.</p>
+
+        <p>> SEARCH RADIUS: UNKNOWN.</p>
+
+        <p>> STATUS: WAITING.</p>
+
+        <div id="coordinates-output">
+
+          <p>LAT: --.----</p>
+          <p>LON: --.----</p>
+
+        </div>
+
+        <button
+          class="main-button"
+          onclick="generateCoordinates()"
+        >
+          [ GENERATE ANOMALY ]
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- EVIDENCE VAULT -->
+    <section id="evidence">
+
+      <h2>THE EVIDENCE VAULT</h2>
+
+      <p class="section-description">
+        Something was found.
+        Something was recorded.
+        Something was submitted.
+      </p>
+
+      <div class="classified-box">
+
+        <p>CLASSIFICATION: UNKNOWN</p>
+
+        <p>FILES: [ENCRYPTED]</p>
+
+        <p>ACCESS LEVEL: RESTRICTED</p>
+
+        <br>
+
+        <button class="main-button">
+          [ ACCESS EVIDENCE ]
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- GUESTBOOK -->
+    <section id="guestbook">
+
+      <h2>THE GUESTBOOK</h2>
+
+      <div class="guestbook-entry">
+
+        <p>[USER_0841]</p>
+
+        <p>
+          Don't go there after dark.
+        </p>
+
+      </div>
+
+      <div class="guestbook-entry">
+
+        <p>[USER_0917]</p>
+
+        <p>
+          I found the marker.
+        </p>
+
+      </div>
+
+      <div class="guestbook-entry">
+
+        <p>[UNKNOWN]</p>
+
+        <p>
+          You are looking in the wrong place.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL MESSAGE -->
+    <section class="final-message">
+
+      <h2>
+        THE RABBIT HOLE IS ALWAYS OPEN.
+      </h2>
+
+      <p>
+        THE QUESTION IS...
+      </p>
+
+      <p class="glitch-text">
+        HOW FAR WILL YOU FOLLOW IT?
+      </p>
+
+    </section>
+
+
+    <footer>
+
+      <p>
+        PROJECT WHITERABBIT.EXE
+      </p>
+
+      <p>
+        CONNECTION TERMINATED.
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
